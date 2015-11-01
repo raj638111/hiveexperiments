@@ -34,9 +34,9 @@ public class a11_Sum extends AbstractGenericUDAFResolver{
 
 	public static class SumEvaluator extends GenericUDAFEvaluator {
 
-		@Override
+		/*@Override
 		public ObjectInspector init(Mode m, ObjectInspector[] parameters) throws HiveException{
-		}	
+		}*/	
 		
 		@Override
 		public AggregationBuffer getNewAggregationBuffer() throws HiveException {

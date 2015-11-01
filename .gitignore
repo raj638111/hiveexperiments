@@ -13,3 +13,4 @@ hs_err_pid*
 **/metastore_db
 **/h15_Proj_Aggregation
 target/*
+/target/
