@@ -1,0 +1,36 @@
+
+Semi Join 
+---------------------------------------------------------#507
+
+    #   An alternative to sub query
+
+    Sub Query
+    ----------------
+    
+        #   SELECT  * FROM things
+                    WHERE things.id IN (SELECT id from sales);
+                    
+    Semi Join
+    ----------------
+    
+        #   SELECT  * FROM things 
+                    LEFT SEMI JOIN sales ON (sales.id = things.id);
+
+
+Map Join
+---------------------------------------------------------#508
+
+    #   Can be used when one table is small enough 
+        to fit in Memory
+        
+    #   Can also be used when the tables are bucketed        
+
+    #   SET hive.optimize.bucketmapjoin=true;   
+    
+    #   SELECT  sales.*, things.*
+                FROM sales JOIN things ON (sales.id = things.id);
+                
+    #   **Will not work for RIGHT OUTER JOIN &
+                            FULL OUTER JOIN 
+            
+    
