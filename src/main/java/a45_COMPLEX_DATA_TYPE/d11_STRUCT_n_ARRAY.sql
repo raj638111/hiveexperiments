@@ -17,6 +17,7 @@ FIELDS TERMINATED BY ',';
 load data local inpath './g11_subjects.txt'
 overwrite into table subjects;
 
+---------------------- Struct --------------------------
 
 create table science (
    name     string,
@@ -28,6 +29,7 @@ insert overwrite table science
 select name, class, named_struct('bny', botany, 'zlgy', zoology)
 from subjects;
 
+---------------------- Array ---------------------------
 
 CREATE TABLE  maths (
    name        string,

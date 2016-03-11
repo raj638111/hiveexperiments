@@ -1,0 +1,5 @@
+alice,alg,70,10
+bob,alg,72,10
+alice,trig,80,10
+bob,trig,81,10
+john,alg,90,11
